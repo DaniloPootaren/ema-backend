@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reported_articles",
+  "info": {
+    "singularName": "reported-article",
+    "pluralName": "reported-articles",
+    "displayName": "Reported Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Misinformation",
+        "Misrepresentation of facts",
+        "other"
+      ],
+      "required": true
+    },
+    "reason": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
