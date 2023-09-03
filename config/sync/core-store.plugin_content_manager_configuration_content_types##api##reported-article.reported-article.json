@@ -7,7 +7,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "type",
+      "mainField": "id",
       "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
@@ -108,20 +108,18 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "users_permissions_user",
+        "article",
+        "type"
+      ],
       "edit": [
-        [
-          {
-            "name": "type",
-            "size": 6
-          }
-        ],
         [
           {
             "name": "users_permissions_user",
             "size": 6
-          }
-        ],
-        [
+          },
           {
             "name": "article",
             "size": 6
@@ -129,16 +127,14 @@
         ],
         [
           {
+            "name": "type",
+            "size": 6
+          },
+          {
             "name": "reason",
-            "size": 8
+            "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "users_permissions_user",
-        "article",
-        "createdAt"
       ]
     }
   },

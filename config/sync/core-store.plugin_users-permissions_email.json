@@ -19,8 +19,8 @@
       "icon": "check-square",
       "options": {
         "from": {
-          "name": "Administration Panel",
-          "email": "no-reply@strapi.io"
+          "name": "Ema Admin",
+          "email": "no-reply@mobile-app-ema.com"
         },
         "response_email": "",
         "object": "Account confirmation",
