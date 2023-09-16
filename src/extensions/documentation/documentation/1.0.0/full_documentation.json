@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-09-03T12:55:52.880Z"
+    "x-generation-date": "2023-09-16T14:38:44.208Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -981,6 +981,9 @@
         ],
         "properties": {
           "data": {
+            "required": [
+              "accepted_terms_and_conditions"
+            ],
             "type": "object",
             "properties": {
               "phone": {
@@ -1000,6 +1003,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "accepted_terms_and_conditions": {
+                "type": "boolean"
               }
             }
           }
@@ -1053,6 +1059,9 @@
       },
       "Profile": {
         "type": "object",
+        "required": [
+          "accepted_terms_and_conditions"
+        ],
         "properties": {
           "phone": {
             "type": "string"
@@ -1554,6 +1563,9 @@
                                       }
                                     }
                                   },
+                                  "accepted_terms_and_conditions": {
+                                    "type": "boolean"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -1649,6 +1661,9 @@
                 }
               }
             }
+          },
+          "accepted_terms_and_conditions": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -2311,6 +2326,9 @@
                                         }
                                       }
                                     }
+                                  },
+                                  "accepted_terms_and_conditions": {
+                                    "type": "boolean"
                                   },
                                   "createdAt": {
                                     "type": "string",

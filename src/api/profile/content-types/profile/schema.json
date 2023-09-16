@@ -23,6 +23,10 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "profile"
+    },
+    "accepted_terms_and_conditions": {
+      "type": "boolean",
+      "required": true
     }
   }
 }

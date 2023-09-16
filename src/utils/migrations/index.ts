@@ -8,7 +8,7 @@ export const insertApiToken = async () => {
   if (!response[0][0]) {
     await strapi.db.connection.raw(
       'Insert into strapi_api_tokens(description, name, type, access_key)' +
-        "VALUES ('', 'Mobile App', 'full-access', '2c618592dd9ae014975b5b3e2f41ce2cf5a5a5b8b25635f94d1d3a3e29835c8105a950086b9a6e798afac8fe05a1ecde6328677a1bdfeaeb663c94d7788019bb') ",
+        "VALUES ('', 'Mobile App', 'full-access', '078b31eb69a2fc901fe7e3e0957b1bb7868960d91dbaf31584e817994c9a232f1441fdc9f8843009d696affef97fe3f5f0cc7ee1d5182bfe0fe5f2cba25fd714') ",
     );
     console.log('Mobile API Token data inserted successfully');
   }
