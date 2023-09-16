@@ -147,6 +147,21 @@
           "sortable": true
         }
       },
+      "profile": {
+        "edit": {
+          "label": "profile",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "phone"
+        },
+        "list": {
+          "label": "profile",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -211,6 +226,12 @@
           },
           {
             "name": "role",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "profile",
             "size": 6
           }
         ]

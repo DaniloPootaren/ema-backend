@@ -64,6 +64,59 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::profile.profile",
+      "properties": {
+        "fields": [
+          "phone",
+          "birthdate",
+          "users_permissions_user",
+          "accepted_terms_and_conditions"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::profile.profile",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::profile.profile",
+      "properties": {
+        "fields": [
+          "phone",
+          "birthdate",
+          "users_permissions_user",
+          "accepted_terms_and_conditions"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::profile.profile",
+      "properties": {
+        "fields": [
+          "phone",
+          "birthdate",
+          "users_permissions_user",
+          "accepted_terms_and_conditions"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::reported-article.reported-article",
       "properties": {
         "fields": [
