@@ -9,8 +9,9 @@ COPY package.json package-lock.json ./
 RUN npm config set fetch-retry-maxtimeout 600000 -g  && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
-COPY . .
-RUN chown -R node:node /opt/app  # Change ownership before building
+# Explicitly set permissions on problematic file
+RUN chown -R node:node /opt/app/src/api/article/documentation/1.0.0/article.json
+
 USER node
 RUN npm run build
 
