@@ -10,6 +10,11 @@ RUN npm config set fetch-retry-maxtimeout 600000 -g  && npm install --only=produ
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
+# Change ownership of the entire app directory to root
+RUN chown -R root:root /opt/app
+
+# Run as root user
+USER root
 RUN npm run build
 
 # Creating final production image
