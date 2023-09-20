@@ -1322,30 +1322,6 @@
     "reselect" "4.1.7"
     "yup" "0.32.9"
 
-"@strapi/plugin-documentation@^4.12.4":
-  "integrity" "sha512-zac9QF9iTuAAkPtutwUUD1JbG/zelGmIwyRRSfmmxoymOBla1lf8GXQerYrZZJ8WOSqZVBmwn+DU8FEoCVupXw=="
-  "resolved" "https://registry.npmjs.org/@strapi/plugin-documentation/-/plugin-documentation-4.12.4.tgz"
-  "version" "4.12.4"
-  dependencies:
-    "@strapi/design-system" "1.8.2"
-    "@strapi/helper-plugin" "4.12.4"
-    "@strapi/icons" "1.8.2"
-    "@strapi/utils" "4.12.4"
-    "bcryptjs" "2.4.3"
-    "cheerio" "^1.0.0-rc.12"
-    "formik" "2.4.0"
-    "fs-extra" "10.0.0"
-    "immer" "9.0.19"
-    "koa-static" "^5.0.0"
-    "lodash" "4.17.21"
-    "path-to-regexp" "6.2.1"
-    "react-helmet" "^6.1.0"
-    "react-intl" "6.4.1"
-    "react-query" "3.39.3"
-    "swagger-ui-dist" "4.19.0"
-    "yaml" "1.10.2"
-    "yup" "0.32.9"
-
 "@strapi/plugin-email@^4.12.4", "@strapi/plugin-email@4.12.4":
   "integrity" "sha512-LrQv9LX+MrOmbe8PlHmjdWV1+FNkx5z1k2W/9sMTKHFZECVcG5muWiJ3AtGfaYrLTcDgOoFLFLtnDOQ/CCB2vg=="
   "resolved" "https://registry.npmjs.org/@strapi/plugin-email/-/plugin-email-4.12.4.tgz"
@@ -2789,7 +2765,7 @@
     "domhandler" "^5.0.3"
     "domutils" "^3.0.1"
 
-"cheerio@^1.0.0-rc.10", "cheerio@^1.0.0-rc.12":
+"cheerio@^1.0.0-rc.10":
   "integrity" "sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q=="
   "resolved" "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.12.tgz"
   "version" "1.0.0-rc.12"
@@ -5595,7 +5571,7 @@
     "is-type-of" "^1.2.1"
     "uuid" "^8.3.2"
 
-"koa-static@^5.0.0", "koa-static@5.0.0":
+"koa-static@5.0.0":
   "integrity" "sha512-UqyYyH5YEXaJrf9S8E23GoJFQZXkBVJ9zYYMPGz919MSX1KuvAcycIuS0ci150HCoPf4XQVhQ84Qf8xRPWxFaQ=="
   "resolved" "https://registry.npmjs.org/koa-static/-/koa-static-5.0.0.tgz"
   "version" "5.0.0"
@@ -6769,7 +6745,7 @@
   dependencies:
     "isarray" "0.0.1"
 
-"path-to-regexp@^6.1.0", "path-to-regexp@6.2.1":
+"path-to-regexp@^6.1.0":
   "integrity" "sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw=="
   "resolved" "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-6.2.1.tgz"
   "version" "6.2.1"
@@ -8357,11 +8333,6 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
-"swagger-ui-dist@4.19.0":
-  "integrity" "sha512-9C9fJGI18gK5AhaU5YRyPY1lXJH4lmWh8h9zFMrJBkYzdRjCbAzYl1ayWPYgwFvag/Luqi3Co599OK/39IS2QQ=="
-  "resolved" "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.19.0.tgz"
-  "version" "4.19.0"
-
 "swap-case@^1.1.0":
   "integrity" "sha512-BAmWG6/bx8syfc6qXPprof3Mn5vQgf5dwdUNJhsNqU9WdPt5P+ES/wQ5bxfijy8zwZgZZHslC3iAsxsuQMCzJQ=="
   "resolved" "https://registry.npmjs.org/swap-case/-/swap-case-1.1.2.tgz"
@@ -9119,7 +9090,7 @@
   "resolved" "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz"
   "version" "4.0.0"
 
-"yaml@^1.10.0", "yaml@1.10.2":
+"yaml@^1.10.0":
   "integrity" "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg=="
   "resolved" "https://registry.npmjs.org/yaml/-/yaml-1.10.2.tgz"
   "version" "1.10.2"

@@ -13,7 +13,6 @@
     "@types/node": "^18.13.0"
   },
   "dependencies": {
-    "@strapi/plugin-documentation": "^4.12.4",
     "@strapi/plugin-email": "^4.12.4",
     "@strapi/plugin-i18n": "4.12.4",
     "@strapi/plugin-users-permissions": "4.12.4",
