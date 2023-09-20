@@ -12,7 +12,7 @@ WORKDIR /opt/app
 COPY . .
 
 # Explicitly set permissions on problematic file
-RUN chown -R node:node /opt/app/src/api/article/documentation/1.0.0/article.json
+RUN chown -R node:node /opt/app
 
 USER node
 RUN npm run build
