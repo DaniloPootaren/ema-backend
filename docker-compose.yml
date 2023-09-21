@@ -31,6 +31,7 @@ services:
       - ema
     depends_on:
       - db
+    command: chmod -R 777 /opt/app/public/uploads
 
   db:
     container_name: db
