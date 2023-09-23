@@ -17,7 +17,7 @@ export default () => ({
         birthdate: null,
         phone: null,
       });
-      return { access_token: await issueToken(user.email), me: santizeUser(user) };
+      return { access_token: await issueToken(user), me: santizeUser(user) };
     }
   },
 
@@ -36,7 +36,7 @@ export default () => ({
         birthdate: null,
         phone: null,
       });
-      return { access_token: await issueToken(user.email), me: santizeUser(user) };
+      return { access_token: await issueToken(user), me: santizeUser(user) };
     }
   },
 });
