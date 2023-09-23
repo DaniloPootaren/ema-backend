@@ -1,6 +1,6 @@
 import { Strapi } from "@strapi/strapi";
 import { FacebookUserProfile, GoogleUserProfile } from "../../../models";
-import { createNewUser, getUserByEmail, issueToken } from "./helpers";
+import { createNewUser, getUserByEmail, issueToken, santizeUser } from "./helpers";
 
 const SLUG = "api::article.article";
 
@@ -10,14 +10,14 @@ export default () => ({
     const user = await getUserByEmail(email);
 
     if (user?.confirmed && !user?.blocked) {
-      return { access_token: await issueToken(user) };
+      return { access_token: await issueToken(user), me: santizeUser(user) };
     } else {
       const { user } = await createNewUser(email, {
         accepted_terms_and_conditions: true,
         birthdate: null,
         phone: null,
       });
-      return { access_token: await issueToken(user.email) };
+      return { access_token: await issueToken(user.email), me: santizeUser(user) };
     }
   },
 
@@ -26,14 +26,17 @@ export default () => ({
     const user = await getUserByEmail(email);
 
     if (user?.confirmed && !user?.blocked) {
-      return { access_token: await issueToken(user) };
+      return {
+        access_token: await issueToken(user),
+        me: santizeUser(user),
+      };
     } else {
       const { user } = await createNewUser(email, {
         accepted_terms_and_conditions: true,
         birthdate: null,
         phone: null,
       });
-      return { access_token: await issueToken(user.email) };
+      return { access_token: await issueToken(user.email), me: santizeUser(user) };
     }
   },
 });

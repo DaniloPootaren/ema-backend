@@ -69,3 +69,10 @@ export const createNewUser = async (
     throw e;
   }
 };
+
+export const santizeUser = (user: User) => {
+  delete user.password;
+  delete user.resetPasswordToken;
+  delete user.confirmationToken;
+  return user;
+};

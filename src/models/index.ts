@@ -18,6 +18,9 @@ export interface User extends AuditModel, ID {
   email: string;
   username: string;
   profile: Profile;
+  password: string;
+  resetPasswordToken: string;
+  confirmationToken: string
 }
 
 export interface Profile extends AuditModel, ID {
