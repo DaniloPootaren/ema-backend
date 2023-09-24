@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::terms-and-condition.terms-and-condition.find"
+    },
+    {
       "action": "plugin::users-permissions.auth.callback"
     },
     {
