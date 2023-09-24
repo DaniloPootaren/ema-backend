@@ -5,7 +5,7 @@
     "allow_register": true,
     "email_confirmation": true,
     "email_reset_password": null,
-    "email_confirmation_redirection": "http://104.154.82.123/successful-registration/index.html",
+    "email_confirmation_redirection": "ema://registration/success",
     "default_role": "authenticated"
   },
   "type": "object",
