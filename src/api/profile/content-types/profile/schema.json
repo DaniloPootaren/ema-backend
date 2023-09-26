@@ -15,9 +15,6 @@
     "phone": {
       "type": "string"
     },
-    "birthdate": {
-      "type": "date"
-    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
@@ -27,6 +24,10 @@
     "accepted_terms_and_conditions": {
       "type": "boolean",
       "required": true
+    },
+    "birthdate": {
+      "type": "string",
+      "regex": "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$"
     }
   }
 }

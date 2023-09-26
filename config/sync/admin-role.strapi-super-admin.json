@@ -66,9 +66,9 @@
       "properties": {
         "fields": [
           "phone",
-          "birthdate",
           "users_permissions_user",
-          "accepted_terms_and_conditions"
+          "accepted_terms_and_conditions",
+          "birthdate"
         ]
       },
       "conditions": []
@@ -85,9 +85,9 @@
       "properties": {
         "fields": [
           "phone",
-          "birthdate",
           "users_permissions_user",
-          "accepted_terms_and_conditions"
+          "accepted_terms_and_conditions",
+          "birthdate"
         ]
       },
       "conditions": []
@@ -98,9 +98,9 @@
       "properties": {
         "fields": [
           "phone",
-          "birthdate",
           "users_permissions_user",
-          "accepted_terms_and_conditions"
+          "accepted_terms_and_conditions",
+          "birthdate"
         ]
       },
       "conditions": []
