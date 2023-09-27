@@ -4,7 +4,7 @@
     "unique_email": true,
     "allow_register": true,
     "email_confirmation": true,
-    "email_reset_password": null,
+    "email_reset_password": "ema://reset-password",
     "email_confirmation_redirection": "ema://registration/success",
     "default_role": "authenticated"
   },
