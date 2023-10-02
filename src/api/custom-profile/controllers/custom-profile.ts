@@ -1,13 +1,14 @@
-/**
- * A set of functions called "actions" for `custom-profile`
- */
+import {Strapi} from '@strapi/strapi';
+
+const SLUG = 'api::custom-profile.custom-profile';
+
 
 export default {
-  // exampleAction: async (ctx, next) => {
-  //   try {
-  //     ctx.body = 'ok';
-  //   } catch (err) {
-  //     ctx.body = err;
-  //   }
-  // }
+  getUserProfile: async (ctx) => {
+    try {
+      return await ((strapi as Strapi).service(SLUG) as any).getUserProfile(ctx);
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
 };
