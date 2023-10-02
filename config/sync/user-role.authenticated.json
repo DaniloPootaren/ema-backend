@@ -4,6 +4,12 @@
   "type": "authenticated",
   "permissions": [
     {
+      "action": "api::custom-profile.custom-profile.getUserProfile"
+    },
+    {
+      "action": "api::profile.profile.update"
+    },
+    {
       "action": "plugin::users-permissions.auth.changePassword"
     },
     {
