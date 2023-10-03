@@ -43,7 +43,11 @@
       "target": "api::tag.tag"
     },
     "title": {
-      "type": "string"
+      "type": "text",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
     }
   }
 }
