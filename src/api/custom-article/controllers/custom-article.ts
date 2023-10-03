@@ -17,4 +17,11 @@ export default {
       throw new Error(err);
     }
   },
+  getTagsByCategory: async (ctx) => {
+    try {
+      return await ((strapi as Strapi).service(SLUG) as any).getTagsByCategory(ctx);
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
 };

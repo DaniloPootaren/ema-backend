@@ -18,5 +18,14 @@ export default {
         middlewares: [],
       },
      },
+     {
+      method: 'GET',
+      path: '/tags',
+      handler: 'custom-article.getTagsByCategory',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };

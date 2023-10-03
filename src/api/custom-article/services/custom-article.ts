@@ -62,4 +62,37 @@ export default () => ({
 
     return { article, relatedArticles };
   },
+
+  getTagsByCategory: async (ctx) => {
+    const type = ctx.query?.type;
+
+    const articles = await strapi.db.query(SLUG).findMany({
+      populate: ["tags"],
+      where: {
+        type,
+      },
+      orderBy: {
+        updatedAt: "desc",
+      },
+    });
+
+    const arrayOfArrays = articles.map((obj) => obj.tags);
+
+    const uniqueObjectsSet = new Set();
+
+    const uniqueArray = [];
+
+    arrayOfArrays.forEach((innerArray) => {
+      innerArray.forEach((obj) => {
+        const objString = JSON.stringify(obj);
+
+        if (!uniqueObjectsSet.has(objString)) {
+          uniqueObjectsSet.add(objString);
+          uniqueArray.push(obj);
+        }
+      });
+    });
+
+    return uniqueArray;
+  },
 });
