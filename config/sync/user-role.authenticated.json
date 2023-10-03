@@ -4,6 +4,9 @@
   "type": "authenticated",
   "permissions": [
     {
+      "action": "api::custom-article.custom-article.getFeaturedArticles"
+    },
+    {
       "action": "api::custom-profile.custom-profile.getUserProfile"
     },
     {

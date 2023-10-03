@@ -2,7 +2,6 @@ import { Strapi } from "@strapi/strapi";
 import { FacebookUserProfile, GoogleUserProfile } from "../../../models";
 import { createNewUser, getUserByEmail, issueToken, santizeUser } from "./helpers";
 
-const SLUG = "api::article.article";
 
 export default () => ({
   googleLogin: async (ctx) => {

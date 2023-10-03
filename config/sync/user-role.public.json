@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::custom-article.custom-article.getFeaturedArticles"
+    },
+    {
       "action": "api::terms-and-condition.terms-and-condition.find"
     },
     {
