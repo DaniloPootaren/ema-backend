@@ -4,7 +4,16 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::custom-article.custom-article.findArticleById"
+    },
+    {
+      "action": "api::custom-article.custom-article.findArticlesByTag"
+    },
+    {
       "action": "api::custom-article.custom-article.getFeaturedArticles"
+    },
+    {
+      "action": "api::custom-article.custom-article.getTagsByCategory"
     },
     {
       "action": "api::terms-and-condition.terms-and-condition.find"
