@@ -95,4 +95,31 @@ export default () => ({
 
     return uniqueArray;
   },
+
+  findArticlesByTag: async (ctx) => {
+    const type = ctx.query?.type;
+    const tagId = ctx.query?.tagId;
+    const pageNumber = ctx.query?.pageNumber;
+    const pageSize = ctx.query?.pageSize;
+
+    const articles = await strapi.db.query(SLUG).findMany({
+      populate: ["image", "tags"],
+      where: {
+        type,
+        publishedAt: {
+          $ne: null,
+        },
+        tags: {
+          id : {
+            $in	: [tagId]
+          }
+        }
+      },
+      orderBy: {
+        publishedAt: "desc",
+      },
+    });
+
+    return paginate(articles, pageNumber, pageSize);
+  },
 });

@@ -24,4 +24,11 @@ export default {
       throw new Error(err);
     }
   },
+  findArticlesByTag: async (ctx) => {
+    try {
+      return await ((strapi as Strapi).service(SLUG) as any).findArticlesByTag(ctx);
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
 };

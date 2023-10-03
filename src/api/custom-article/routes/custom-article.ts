@@ -27,5 +27,14 @@ export default {
         middlewares: [],
       },
      },
+     {
+      method: 'GET',
+      path: '/find-articles-by-tag',
+      handler: 'custom-article.findArticlesByTag',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };
