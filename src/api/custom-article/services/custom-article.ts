@@ -9,7 +9,6 @@ export default () => ({
     const pageSize = ctx.query?.pageSize;
     const featured = ctx.query?.featured;
 
-
     const articles = await strapi.db.query(SLUG).findMany({
       populate: ["image", "tags"],
       where: {
@@ -25,12 +24,11 @@ export default () => ({
     });
 
     return paginate(articles, pageNumber, pageSize);
-
   },
 
   findArticleById: async (ctx) => {
     const id = ctx.params.id;
-    
+
     const article = await strapi.db.query(SLUG).findOne({
       populate: ["image", "tags"],
       where: {
@@ -38,10 +36,30 @@ export default () => ({
         publishedAt: {
           $ne: null,
         },
-      }
+      },
     });
 
-    return article;
+    const relatedArticles = await strapi.db.query(SLUG).findMany({
+      populate: ["image", "tags"],
+      where: {
+        id: {
+          $ne: article.id,
+        },
+        type: article.type,
+        publishedAt: {
+          $ne: null,
+        },
+        tags: {
+          id: {
+            $in: article.tags.map((obj) => obj.id),
+          },
+        },
+      },
+      orderBy: {
+        publishedAt: "desc",
+      },
+    });
 
+    return { article, relatedArticles };
   },
 });
