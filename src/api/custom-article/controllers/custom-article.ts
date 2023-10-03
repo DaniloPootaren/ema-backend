@@ -10,4 +10,11 @@ export default {
       throw new Error(err);
     }
   },
+  findArticleById: async (ctx) => {
+    try {
+      return await ((strapi as Strapi).service(SLUG) as any).findArticleById(ctx);
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
 };

@@ -27,4 +27,21 @@ export default () => ({
     return paginate(articles, pageNumber, pageSize);
 
   },
+
+  findArticleById: async (ctx) => {
+    const id = ctx.params.id;
+    
+    const article = await strapi.db.query(SLUG).findOne({
+      populate: ["image", "tags"],
+      where: {
+        id,
+        publishedAt: {
+          $ne: null,
+        },
+      }
+    });
+
+    return article;
+
+  },
 });

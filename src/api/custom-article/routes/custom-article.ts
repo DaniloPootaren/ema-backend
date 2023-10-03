@@ -9,5 +9,14 @@ export default {
        middlewares: [],
      },
     },
+    {
+      method: 'GET',
+      path: '/find-article/:id',
+      handler: 'custom-article.findArticleById',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };
