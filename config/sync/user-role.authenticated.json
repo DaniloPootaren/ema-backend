@@ -22,6 +22,9 @@
       "action": "api::profile.profile.update"
     },
     {
+      "action": "api::reported-article.reported-article.create"
+    },
+    {
       "action": "plugin::users-permissions.auth.changePassword"
     },
     {
