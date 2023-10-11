@@ -4,6 +4,9 @@
   "type": "authenticated",
   "permissions": [
     {
+      "action": "api::article.article.find"
+    },
+    {
       "action": "api::custom-article.custom-article.findArticleById"
     },
     {
@@ -26,6 +29,9 @@
     },
     {
       "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
     },
     {
       "action": "plugin::users-permissions.user.me"
