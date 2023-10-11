@@ -16,6 +16,9 @@
       "action": "api::custom-article.custom-article.getTagsByCategory"
     },
     {
+      "action": "api::custom-article.custom-article.shareArticle"
+    },
+    {
       "action": "api::terms-and-condition.terms-and-condition.find"
     },
     {

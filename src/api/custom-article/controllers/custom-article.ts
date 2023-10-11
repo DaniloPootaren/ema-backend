@@ -31,4 +31,10 @@ export default {
       throw new Error(err);
     }
   },
+  shareArticle: async (ctx) => {
+    const { id } = ctx.params;
+    const redirectUrl = `ema://article/${id}`;
+    
+    ctx.redirect(redirectUrl, 302);
+  },
 };

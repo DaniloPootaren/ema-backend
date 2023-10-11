@@ -36,5 +36,14 @@ export default {
         middlewares: [],
       },
      },
+     {
+      method: 'GET',
+      path: '/share-article/:id',
+      handler: 'custom-article.shareArticle',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };
