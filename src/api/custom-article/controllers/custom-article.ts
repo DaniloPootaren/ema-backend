@@ -31,6 +31,13 @@ export default {
       throw new Error(err);
     }
   },
+  search: async (ctx) => {
+    try {
+      return await ((strapi as Strapi).service(SLUG) as any).search(ctx);
+    } catch (err) {
+      throw new Error(err);
+    }
+  },
   shareArticle: async (ctx) => {
     const { id } = ctx.params;
     const redirectUrl = `ema://article/${id}`;

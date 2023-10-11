@@ -45,5 +45,14 @@ export default {
         middlewares: [],
       },
      },
+     {
+      method: 'GET',
+      path: '/search',
+      handler: 'custom-article.search',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+     },
   ],
 };

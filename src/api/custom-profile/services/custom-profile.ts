@@ -1,5 +1,4 @@
 const utils = require("@strapi/utils");
-const { ForbiddenError } = utils.errors;
 
 export default () => ({
   getUserProfile: async (ctx) => {

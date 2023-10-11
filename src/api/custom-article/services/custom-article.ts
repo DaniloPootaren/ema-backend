@@ -122,4 +122,37 @@ export default () => ({
 
     return paginate(articles, pageNumber, pageSize);
   },
+  search: async (ctx) => {
+    const type = ctx.query?.type;
+    const tags = ctx.query?.tags;
+    const value = ctx.query?.value;
+
+
+
+
+
+    const articles = await strapi.db.query(SLUG).findMany({
+      populate: ["image", "tags"],
+      where: {
+        type,
+        publishedAt: {
+          $ne: null,
+        },
+        tags: {
+          id : {
+            $in	: tags
+          }
+        },
+        title: {
+          $contains: value
+        }
+
+      },
+      orderBy: {
+        publishedAt: "desc",
+      },
+    });
+
+    return articles;
+  },
 });
